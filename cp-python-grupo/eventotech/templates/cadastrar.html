@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}Cadastrar Evento{% endblock %} {%
+block content %}
+
+<h1>Cadastrar Evento</h1>
+<form method="POST" action="./cadastrar.html">
+  <label>Nome: <input type="text" name="nome_evento" /></label><br />
+  <label>Categoria: <input type="text" name="categoria" /></label><br />
+  <label>Data: <input type="date" name="data_evento" /></label><br />
+  <button type="submit">Cadastrar</button>
+</form>
+{% endblock %}

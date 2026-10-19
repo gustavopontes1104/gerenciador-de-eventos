@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Editar Evento{% endblock %} {% block
+content %}
+<h1>Editar Evento</h1>
+<form method="POST" action="{{ url_for('editar', id=evento.id_evento) }}">
+  <label
+    >Nome:
+    <input
+      type="text"
+      name="nome_evento"
+      value="{{ evento.nome_evento }}" /></label
+  ><br />
+  <label
+    >Categoria:
+    <input type="text" name="categoria" value="{{ evento.categoria }}" /></label
+  ><br />
+  <button type="submit">Salvar</button>
+</form>
+{% endblock %}

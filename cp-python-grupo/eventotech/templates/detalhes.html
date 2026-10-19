@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}Detalhes do Evento{% endblock %} {%
+block content %}
+
+<h1>{{ evento.nome_evento }}</h1>
+<p>Categoria: {{ evento.categoria }}</p>
+<p>Data: {{ evento.data_evento }}</p>
+<p>Local: {{ evento.local_evento }}</p>
+<a href="./eventos.html">Voltar</a>
+{% endblock %}

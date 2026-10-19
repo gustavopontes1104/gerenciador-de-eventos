@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Lista de Eventos{% endblock %} {%
+block content %}
+
+<h1>Eventos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Categoria</th>
+      <th>Data</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ evento.nome_evento }}</td>
+      <td>{{ evento.categoria }}</td>
+      <td>{{ evento.data_evento }}</td>
+      <td>{{ evento.status }}</td>
+    </tr>
+    {% else %}
+    <tr>
+      <td colspan="4">Nenhum evento cadastrado.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
