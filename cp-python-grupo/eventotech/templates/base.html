@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>{% block title %}EventoTech{% endblock %}</title>
-    <link rel="stylesheet" href="../static/style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
     <nav>
-      <a href="{{ url_for('inicio') }}">Início</a>
-      <a href="{{ url_for('listar') }}">Eventos</a>
-      <a href="{{ url_for('cadastrar') }}">Cadastrar</a>
+      <a href="{{ url_for('index') }}">Início</a>
+      <a href="{{ url_for('listar_eventos') }}">Eventos</a>
+      <a href="{{ url_for('cadastrar_evento') }}">Cadastrar</a>
     </nav>
-
     {% block content %} {% endblock %}
   </body>
 </html>
