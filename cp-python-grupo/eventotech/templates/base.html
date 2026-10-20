@@ -7,10 +7,11 @@
   </head>
   <body>
     <nav>
-      <a href="./base.html">Início</a>
-      <a href="./eventos.html">Eventos</a>
-      <a href="./cadastrar.html">Cadastrar</a>
+      <a href="{{ url_for('inicio') }}">Início</a>
+      <a href="{{ url_for('listar') }}">Eventos</a>
+      <a href="{{ url_for('cadastrar') }}">Cadastrar</a>
     </nav>
+
     {% block content %} {% endblock %}
   </body>
 </html>

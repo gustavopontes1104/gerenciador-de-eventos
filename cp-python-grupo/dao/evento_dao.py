@@ -4,8 +4,8 @@ import oracledb
 class EventoDAO:
     def __init__(self):
         self.conexao = Conexaodb(
-            usuario="user",
-            senha="senha",
+            usuario="rm569961",
+            senha="030308",
             host="host",
             porta=1521,
             service_name="ORCL"
