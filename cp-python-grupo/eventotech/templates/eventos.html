@@ -5,22 +5,37 @@ block content %}
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Nome</th>
       <th>Categoria</th>
       <th>Data</th>
+      <th>Local</th>
       <th>Status</th>
+      <th>Ações</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>{{ evento.id_evento }}</td>
       <td>{{ evento.nome_evento }}</td>
       <td>{{ evento.categoria }}</td>
       <td>{{ evento.data_evento }}</td>
+      <td>{{ evento.local_evento }}</td>
       <td>{{ evento.status }}</td>
+      <td>
+        <a href="{{ url_for('editar_evento', id=evento.id_evento) }}">Editar</a>
+        <a
+          href="{{ url_for('excluir_evento', id=evento.id_evento) }}"
+          onclick="
+            return confirm('Tem certeza que deseja excluir este evento?');
+          "
+          >Excluir</a
+        >
+      </td>
     </tr>
     {% else %}
     <tr>
-      <td colspan="4">Nenhum evento cadastrado.</td>
+      <td colspan="7">Nenhum evento cadastrado.</td>
     </tr>
     {% endfor %}
   </tbody>
