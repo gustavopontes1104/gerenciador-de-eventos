@@ -14,7 +14,8 @@ class EventoDAO:
     def cadastrar_evento(self, evento):
         conn = self.conexao.conectar()
         if conn is None:
-            return "Erro ao conectar ao Oracle."
+            print("Erro ao conectar ao Oracle.")
+            return False
 
         id_evento = evento.id_evento
         nome_evento = evento.nome_evento
@@ -56,7 +57,8 @@ class EventoDAO:
     def listar_eventos(self):
             conn = self.conexao.conectar()
             if conn is None:
-                return "Erro ao conectar ao Oracle." 
+                print("Erro ao conectar ao Oracle.")
+                return False 
 
             cursor = conn.cursor()
             sql = """select id_evento, nome_evento, categoria, data_evento, local_evento, capacidade, valor_ingresso, responsavel, status, data_cadastro 
@@ -81,7 +83,8 @@ class EventoDAO:
     def buscar_id_evento(self, id_evento):
         conn = self.conexao.conectar()
         if conn is None:
-            return "Erro ao conectar ao Oracle."
+            print("Erro ao conectar ao Oracle.")
+            return False
 
         cursor = conn.cursor()
         sql = """select id_evento, nome_evento, categoria, data_evento, local_evento,
@@ -107,7 +110,8 @@ class EventoDAO:
     def editar_evento(self, evento):
         conn = self.conexao.conectar()
         if conn is None:
-            return "Erro ao conectar ao Oracle."
+            print("Erro ao conectar ao Oracle.")
+            return False
 
         cursor = conn.cursor()
         sql = """update eventos
@@ -152,7 +156,8 @@ class EventoDAO:
     def excluir_evento(self, id_evento):
         conn = self.conexao.conectar()
         if conn is None:
-            return "Erro ao conectar ao Oracle."
+            print("Erro ao conectar ao Oracle.")
+            return False
 
         cursor = conn.cursor()
         sql = "delete from eventos where id_evento = :id_evento"

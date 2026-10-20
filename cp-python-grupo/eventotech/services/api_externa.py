@@ -5,7 +5,7 @@ def verificar_feriado(data_evento):
         ano = data_evento.year
         url = f"https://brasilapi.com.br/api/feriados/v1/{ano}"
         resposta = requests.get(url, timeout=5)
-        reposta.raise_for_status()
+        resposta.raise_for_status()
         feriados = resposta.json()
 
     except requests.Timeout:
