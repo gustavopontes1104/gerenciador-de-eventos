@@ -1,5 +1,17 @@
 class Evento:
-    def __init__(self, id_evento, nome_evento, categoria, data_evento, local_evento, capacidade, valor_ingresso, responsavel, status, data_cadastro):
+    def __init__(
+        self,
+        id_evento,
+        nome_evento,
+        categoria,
+        data_evento,
+        local_evento,
+        capacidade,
+        valor_ingresso,
+        responsavel,
+        status,
+        data_cadastro,
+    ):
         self.id_evento = id_evento
         self.nome_evento = nome_evento
         self.categoria = categoria
